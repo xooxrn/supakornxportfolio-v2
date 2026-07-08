@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Meta Tags -->
+<title>Supakorn Khawpong — Video Editor & Visual Designer</title>
+<meta name="description" content="Bangkok-based Video Editor & Visual Designer / Operator. Specializing in visual content, event visuals, and post-production.">
+<meta name="keywords" content="video editor, visual designer, VJ, Bangkok, Resolume, After Effects, Premiere Pro, motion graphics">
+<meta name="author" content="Supakorn Khawpong">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (Facebook, LINE, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Supakorn Khawpong — Video Editor & Visual Designer">
+<meta property="og:description" content="Bangkok-based Video Editor & Visual Designer / Operator. I Edit Films. Design Visuals. Tell Stories.">
+<meta property="og:image" content="https://raw.githubusercontent.com/xooxrn/supakornxportfolio/main/img_20251030_113152_743.webp">
+<meta property="og:url" content="https://supakornxportfolio.vercel.app">
+<meta property="og:site_name" content="Supakorn Khawpong Portfolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Supakorn Khawpong — Video Editor & Visual Designer">
+<meta name="twitter:description" content="Bangkok-based Video Editor & Visual Designer / Operator.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/xooxrn/supakornxportfolio/main/img_20251030_113152_743.webp">
+
+<!-- Favicon (SVG inline) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='serif' fill='%23E24B4A'>Z</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='serif' fill='%23E24B4A'>Z</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'DB Adman X';
+    src: url('assets/DBAdman-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'DB Adman X';
+    src: url('assets/DBAdman-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'DB Adman X';
+    src: url('assets/DBAdman-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+</style>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --accent: #E24B4A;       /* 🎨 CHANGE THIS to change the red accent color */
+    --bg: #0a0a0a;
+    --bg3: #1a1a1a;
+    --border: rgba(255,255,255,0.07);
+    --text: #f0ede8;
+    --muted: #888;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; font-size: 14px; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeSpeed; }
+
+  /* PERFORMANCE */
+  section { content-visibility: auto; contain-intrinsic-size: 0 600px; }
+  img { decoding: async; }
+  nav { will-change: transform; transform: translateZ(0); }
+  .project-card { will-change: transform; }
+  .reveal, .reveal-left, .reveal-right { will-change: opacity, transform; }
+
+  /* REDUCED MOTION */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; }
+    .particle { display: none; }
+  }
+
+  /* MOBILE PERFORMANCE */
+  @media (max-width: 768px) {
+    .hero-scanline { display: none; }
+    .particle { animation-duration: 15s; }
+    * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+    .project-card { will-change: auto; }
+  }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'DB Adman X', sans-serif; font-size: 1.4rem; letter-spacing: 0.12em; color: var(--text); }
+  .nav-logo span { color: var(--accent); }
+  nav ul { list-style: none; display: flex; gap: 2.5rem; }
+  nav ul li a { color: var(--muted); text-decoration: none; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+  nav ul li a:hover { color: var(--text); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 3rem 5rem; position: relative; overflow: hidden; }
+  /* HERO ANIMATIONS */
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(226,75,74,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 20% 80%, rgba(226,75,74,0.06) 0%, transparent 60%); animation: bgpulse 8s ease-in-out infinite; }
+  @keyframes bgpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+  /* PARTICLES */
+  .hero-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .particle { position: absolute; width: 2px; height: 2px; background: var(--accent); border-radius: 50%; opacity: 0; animation: float linear infinite; }
+  @keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-10vh) translateX(30px); opacity: 0; }
+  }
+
+  /* GLITCH TEXT */
+  .accent-name { position: relative; }
+  .accent-name::before, .accent-name::after {
+    content: attr(data-text);
+    position: absolute; left: 0; top: 0;
+    color: var(--accent);
+    clip-path: inset(0 0 0 0);
+  }
+  .accent-name::before { animation: glitch1 5s infinite; color: rgba(226,75,74,0.6); }
+  .accent-name::after { animation: glitch2 5s infinite; color: rgba(100,200,255,0.4); }
+  @keyframes glitch1 {
+    0%, 90%, 100% { clip-path: inset(100% 0 0 0); transform: translate(0); }
+    92% { clip-path: inset(20% 0 60% 0); transform: translate(-3px, 0); }
+    94% { clip-path: inset(60% 0 10% 0); transform: translate(3px, 0); }
+    96% { clip-path: inset(40% 0 40% 0); transform: translate(-2px, 0); }
+  }
+  @keyframes glitch2 {
+    0%, 88%, 100% { clip-path: inset(100% 0 0 0); transform: translate(0); }
+    90% { clip-path: inset(10% 0 70% 0); transform: translate(3px, 0); }
+    93% { clip-path: inset(50% 0 20% 0); transform: translate(-3px, 0); }
+    95% { clip-path: inset(30% 0 50% 0); transform: translate(2px, 0); }
+  }
+
+  /* SCANLINE */
+  .hero-scanline { position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 3px); animation: scanmove 8s linear infinite; }
+  @keyframes scanmove { 0% { background-position: 0 0; } 100% { background-position: 0 100px; } }
+  .hero-lines { position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,255,255,0.025) 80px); }
+  .hero-tag { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .hero-tag::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--accent); }
+  .hero h1 { font-family: 'DB Adman X', sans-serif; font-size: clamp(3.5rem, 9vw, 8rem); line-height: 0.92; letter-spacing: 0.02em; position: relative; z-index: 1; }
+  .hero h1 .outline { -webkit-text-stroke: 1px rgba(255,255,255,0.25); color: transparent; }
+  .hero h1 .accent-name { color: var(--accent); }
+  .hero-sub { margin-top: 2rem; max-width: 480px; color: var(--muted); font-size: 13px; line-height: 1.8; position: relative; z-index: 1; }
+  .hero-cta { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; position: relative; z-index: 1; }
+  .btn-primary { background: var(--accent); color: #fff; border: none; padding: 0.85rem 2rem; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s, transform 0.15s; text-decoration: none; display: inline-block; border-radius: 999px; }
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn-ghost { border: 1px solid var(--border); color: var(--muted); padding: 0.85rem 2rem; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; background: transparent; transition: all 0.2s; text-decoration: none; display: inline-block; border-radius: 999px; }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.3); color: var(--text); background: rgba(255,255,255,0.04); }
+  .hero-scroll { position: absolute; right: 3rem; bottom: 5rem; writing-mode: vertical-rl; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 1rem; }
+  .hero-scroll::after { content: ''; display: block; width: 1px; height: 48px; background: var(--muted); animation: scrollline 2s ease-in-out infinite; }
+  @keyframes scrollline { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+  /* SECTIONS */
+  section { padding: 7rem 3rem; border-top: 1px solid var(--border); }
+  .section-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem; }
+  .section-label span { color: var(--muted); font-size: 10px; }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .about-title { font-family: 'DB Adman X', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; letter-spacing: 0.05em; margin-bottom: 1.5rem; }
+  .about-title em { font-style: normal; color: var(--accent); }
+  .about-body { color: var(--muted); font-size: 16px; line-height: 1.9; margin-bottom: 1rem; }
+  .stats-row { display: flex; gap: 2.5rem; margin-top: 2.5rem; }
+  .stat-num { font-family: 'DB Adman X', sans-serif; font-size: 2.5rem; color: var(--text); line-height: 1; }
+  .stat-num span { color: var(--accent); }
+  .stat-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
+  .about-img-wrap { background: var(--bg3); border: 1px solid var(--border); aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; max-width: 70%; margin-left: auto; }
+  .about-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+  .about-img-wrap::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(226,75,74,0.15), transparent 60%); pointer-events: none; }
+  .about-placeholder { font-family: 'DB Adman X', sans-serif; font-size: 1rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.15); text-align: center; }
+  .about-placeholder small { display: block; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; margin-top: 0.5rem; }
+  .about-corner { display: none; }
+
+  /* PROJECTS */
+  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; background: transparent; padding: 0; }
+  .project-card { background: var(--bg3); padding: 2rem; position: relative; overflow: hidden; cursor: pointer; transition: background 0.3s, transform 0.3s; border-radius: 16px; border: 1px solid var(--border); }
+  .project-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+  .project-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.4s ease; border-radius: 0 0 16px 16px; }
+  .project-card:hover::after { width: 100%; }
+  .project-thumb { background: var(--bg3); aspect-ratio: 16/9; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .project-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .project-thumb-inner { font-size: 2rem; color: rgba(255,255,255,0.07); font-family: 'DB Adman X', sans-serif; }
+  .play-btn { position: absolute; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s, background 0.2s; }
+  .play-btn svg { width: 12px; height: 12px; fill: rgba(255,255,255,0.5); margin-left: 2px; }
+  .project-card:hover .play-btn { border-color: var(--accent); background: rgba(226,75,74,0.15); }
+  .project-card:hover .play-btn svg { fill: var(--accent); }
+  .project-cat { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .project-name { font-family: 'DB Adman X', sans-serif; font-size: 1.4rem; letter-spacing: 0.05em; color: var(--text); margin-bottom: 0.5rem; }
+  .project-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+  .project-meta { margin-top: 1.2rem; font-size: 10px; color: rgba(255,255,255,0.2); display: flex; justify-content: space-between; }
+
+  /* SCROLL PROGRESS BAR */
+  #progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); z-index: 9999; width: 0%; transition: width 0.1s linear; box-shadow: 0 0 8px var(--accent); }
+
+  /* ACTIVE NAV */
+  nav ul li a.active { color: var(--accent); }
+  nav ul li a.active::after { content: ''; display: block; width: 100%; height: 1px; background: var(--accent); margin-top: 2px; }
+
+  /* PROJECT CARD HOVER OVERLAY */
+  .card-overlay { position: absolute; inset: 0; background: rgba(226,75,74,0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+  .card-overlay span { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #fff; }
+  .project-card:hover .card-overlay { opacity: 1; }
+
+  /* TYPING CURSOR */
+  .typing-cursor { display: inline-block; width: 3px; height: 0.85em; background: var(--accent); margin-left: 4px; animation: blink 0.8s step-end infinite; vertical-align: middle; }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  /* SCROLL REVEAL ANIMATIONS */
+  .reveal { opacity: 0; transform: translateY(40px) translateZ(0); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); will-change: opacity, transform; }
+  .reveal.visible { opacity: 1; transform: translateY(0) translateZ(0); }
+  .reveal-left { opacity: 0; transform: translateX(-40px) translateZ(0); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); will-change: opacity, transform; }
+  .reveal-left.visible { opacity: 1; transform: translateX(0) translateZ(0); }
+  .reveal-right { opacity: 0; transform: translateX(40px) translateZ(0); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); will-change: opacity, transform; }
+  .reveal-right.visible { opacity: 1; transform: translateX(0) translateZ(0); }
+  .reveal-stagger > * { opacity: 0; transform: translateY(30px) translateZ(0); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); will-change: opacity, transform; }
+  .reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:translateY(0) translateZ(0); transition-delay:0s; }
+  .reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:translateY(0) translateZ(0); transition-delay:0.08s; }
+  .reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:translateY(0) translateZ(0); transition-delay:0.16s; }
+  .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:translateY(0) translateZ(0); transition-delay:0.24s; }
+  .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:translateY(0) translateZ(0); transition-delay:0.32s; }
+  .reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:translateY(0) translateZ(0); transition-delay:0.40s; }
+  .reveal-stagger.visible > *:nth-child(n+7) { opacity:1; transform:translateY(0) translateZ(0); transition-delay:0.48s; }
+
+  /* SKILLS */
+  .skills-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
+  .skills-intro h2 { font-family: 'DB Adman X', sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; margin-bottom: 1rem; }
+  .skills-intro p { color: var(--muted); font-size: 12px; line-height: 1.9; }
+  .skill-item { padding: 1.25rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1.5rem; }
+  .skill-item:first-child { border-top: 1px solid var(--border); }
+  .skill-name { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); min-width: 160px; }
+  .skill-bar-wrap { flex: 1; }
+  .skill-level { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-align: right; min-width: 80px; }
+  .skill-level.advanced { color: var(--accent); }
+  .skill-level.intermediate { color: rgba(226,75,74,0.6); }
+  .skill-level.basic { color: var(--muted); }
+
+  /* CONTACT */
+  .contact-inner { max-width: 640px; }
+  .contact-inner h2 { font-family: 'DB Adman X', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 0.95; margin-bottom: 2rem; }
+  .contact-inner h2 .outline { -webkit-text-stroke: 1px rgba(255,255,255,0.2); color: transparent; }
+  .contact-inner p { color: var(--muted); font-size: 13px; line-height: 1.9; margin-bottom: 2.5rem; }
+  .contact-link { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.25rem; margin-bottom: 6px; background: var(--bg3); border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: all 0.25s; border-radius: 12px; }
+  .contact-link:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); padding-left: 1.75rem; }
+  .contact-link:first-child { border-top: 1px solid var(--border); }
+  .contact-link:hover { padding-left: 0.75rem; }
+  .contact-link:hover .cl-label { color: var(--accent); }
+  .cl-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; transition: color 0.2s; }
+  .cl-value { font-size: 12px; color: var(--muted); }
+
+  /* FOOTER */
+  footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  .footer-logo { font-family: 'DB Adman X', sans-serif; font-size: 1.2rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.2); }
+  .footer-copy { font-size: 10px; color: rgba(255,255,255,0.15); }
+
+
+
+  /* FILTER BAR */
+  .filter-bar { display: flex; gap: 0.5rem; margin-bottom: 3rem; flex-wrap: wrap; }
+  .filter-btn { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 0.5rem 1.4rem; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; border-radius: 999px; }
+  .filter-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--text); background: rgba(255,255,255,0.04); }
+  .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(226,75,74,0.08); }
+
+  /* ── TABLET (iPad) ── */
+  @media (max-width: 1024px) {
+    nav { padding: 1rem 2rem; }
+    .hero, section { padding-left: 2rem; padding-right: 2rem; }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { gap: 3rem; }
+    .skills-layout { gap: 3rem; }
+  }
+
+  /* ── MOBILE (768px) ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    nav ul { gap: 0.8rem; }
+    nav ul li a { font-size: 9px; letter-spacing: 0.08em; }
+    .nav-logo { font-size: 1.1rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    section { padding: 4rem 1.5rem; }
+    .hero h1 { font-size: clamp(2.8rem, 14vw, 5rem); }
+    .hero-sub { font-size: 12px; }
+    .hero-cta { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    .btn-primary, .btn-ghost { width: 100%; text-align: center; }
+    .hero-scroll { display: none; }
+    .about-grid, .skills-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-img-wrap { max-width: 100%; margin-left: 0; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .filter-bar { flex-wrap: wrap; gap: 0.5rem; }
+    .filter-btn { flex: 1; text-align: center; padding: 0.5rem 1rem; font-size: 10px; }
+    .skill-name { min-width: 120px; font-size: 10px; }
+    .contact-link { padding: 1rem 0.75rem; }
+    .cl-value { font-size: 11px; }
+    .section-label { font-size: 10px; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.75rem; text-align: center; }
+    #scroll-btn { width: 38px; height: 38px; right: 1rem; bottom: 1.5rem; }
+  }
+
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--border); }
+  .timeline-item { position: relative; padding-bottom: 2.5rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -2rem; top: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--border); border: 1px solid var(--border); transition: background 0.3s; }
+  .timeline-item:hover::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 8px rgba(226,75,74,0.4); }
+  .timeline-year { font-size: 10px; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 0.3rem; }
+  .timeline-title { font-family: 'DB Adman X', sans-serif; font-size: 1.2rem; color: var(--text); margin-bottom: 0.25rem; }
+  .timeline-role { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+  .timeline-desc { font-size: 11px; color: var(--muted); line-height: 1.8; }
+  .timeline-tag { display: inline-block; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--border); color: var(--muted); padding: 0.2rem 0.6rem; margin-top: 0.5rem; margin-right: 0.3rem; }
+  .search-wrap { margin-bottom: 1.5rem; position: relative; display: inline-block; }
+  .search-input { width: 100%; max-width: 320px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: var(--text); padding: 0.6rem 1rem 0.6rem 2.5rem; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; outline: none; transition: border-color 0.2s; border-radius: 999px; }
+  .search-input::placeholder { color: var(--muted); }
+  .search-input:focus { border-color: rgba(226,75,74,0.4); }
+  .search-icon { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 12px; pointer-events: none; }
+  .search-no-result { display: none; font-size: 11px; color: var(--muted); letter-spacing: 0.1em; padding: 2rem 0; text-transform: uppercase; }
+
+  /* NOISE TEXTURE OVERLAY */
+  /* PRELOADER */
+  /* SKELETON LOADER */
+  /* PRELOADER */
+  #preloader { position: fixed; inset: 0; background: var(--bg); z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; transition: opacity 0.6s ease, visibility 0.6s ease; }
+  #preloader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+  .preloader-logo { font-family: 'DB Adman X', sans-serif; font-size: 2.5rem; letter-spacing: 0.1em; color: var(--text); }
+  .preloader-logo span { color: var(--accent); }
+  .preloader-bar-wrap { width: 160px; height: 1px; background: rgba(255,255,255,0.1); overflow: hidden; }
+  .preloader-bar { height: 100%; background: var(--accent); width: 0%; animation: preload 1.4s cubic-bezier(0.16,1,0.3,1) forwards; box-shadow: 0 0 8px var(--accent); }
+  @keyframes preload { 0% { width: 0%; } 100% { width: 100%; } }
+  .preloader-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.3em; color: var(--muted); text-transform: uppercase; }
+
+  /* SCROLL TO TOP WITH PROGRESS RING */
+  #scroll-top-ring { position: fixed; right: 1.5rem; bottom: 5.5rem; z-index: 500; width: 44px; height: 44px; cursor: pointer; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+  #scroll-top-ring.visible { opacity: 1; pointer-events: all; }
+  #scroll-top-ring svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+  #scroll-top-ring .ring-bg { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 1.5; }
+  #scroll-top-ring .ring-fill { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 126; stroke-dashoffset: 126; transition: stroke-dashoffset 0.15s linear; stroke-linecap: round; }
+  .ring-inner { position: absolute; inset: 4px; background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; color: var(--muted); }
+  #scroll-top-ring:hover .ring-inner { background: rgba(226,75,74,0.15); border-color: rgba(226,75,74,0.4); color: var(--accent); }
+
+  /* LAZY LOAD IMAGES */
+  img.lazy { opacity: 0; transition: opacity 0.5s ease; }
+  img.lazy.loaded { opacity: 1; }
+
+  /* SHARE BUTTON */
+  .share-btn { position: fixed; bottom: 9rem; right: 1.5rem; z-index: 500; width: 44px; height: 44px; background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--muted); transition: all 0.25s; box-shadow: inset 0 1px 0 rgba(255,255,255,0.06); }
+  .share-btn:hover { background: rgba(226,75,74,0.15); border-color: rgba(226,75,74,0.4); color: var(--accent); }
+  .share-toast { position: fixed; bottom: 13.5rem; right: 1rem; background: rgba(226,75,74,0.95); color: #fff; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; padding: 0.5rem 1rem; opacity: 0; transform: translateY(8px); transition: all 0.3s; pointer-events: none; z-index: 600; white-space: nowrap; }
+
+  /* HAMBURGER MENU */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 200; }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text); transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .mobile-menu { position: fixed; top: 0; right: -100%; width: 75%; max-width: 300px; height: 100vh; background: rgba(10,10,10,0.97); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-left: 1px solid rgba(255,255,255,0.06); z-index: 150; display: flex; flex-direction: column; justify-content: center; padding: 3rem 2.5rem; transition: right 0.4s cubic-bezier(0.16,1,0.3,1); }
+  .mobile-menu.open { right: 0; }
+  .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 2rem; }
+  .mobile-menu ul li a { font-family: 'DB Adman X', sans-serif; font-size: 2rem; letter-spacing: 0.05em; color: var(--text); text-decoration: none; transition: color 0.2s; }
+  .mobile-menu ul li a:hover { color: var(--accent); }
+  .mobile-menu-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 140; display: none; }
+  .mobile-menu-overlay.open { display: block; }
+
+  @media (max-width: 768px) {
+    nav ul { display: none; }
+    .hamburger { display: flex; }
+  }
+  @media (max-width: 400px) {
+    nav ul { gap: 0.5rem; }
+    nav ul li a { font-size: 8px; letter-spacing: 0.05em; }
+    .nav-logo { font-size: 1rem; }
+    .hero h1 { font-size: clamp(2.4rem, 13vw, 3.5rem); }
+    .about-title { font-size: clamp(2rem, 10vw, 3rem); }
+  }
+
+  /* ── MACBOOK / LARGE DESKTOP ── */
+  @media (min-width: 1440px) {
+    .hero, section { padding-left: 5rem; padding-right: 5rem; }
+    nav { padding: 1.2rem 5rem; }
+    .projects-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1920px) {
+    .hero, section { padding-left: 8rem; padding-right: 8rem; }
+    nav { padding: 1.2rem 8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <div class="preloader-logo">SUPAKORN<span>.</span>K</div>
+  <div class="preloader-bar-wrap"><div class="preloader-bar"></div></div>
+  <div class="preloader-text">Loading Portfolio...</div>
+</div>
+<div id="progress-bar"></div>
+
+
+<!-- ============================================================
+     🔵 NAV BAR
+     Change "SUPAKORN.K" to your preferred short name/logo text
+     ============================================================ -->
+<nav>
+  <a href="#home" style="text-decoration:none; color:inherit;"><div class="nav-logo">SUPAKORN<span>.</span>K</div></a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ============================================================
+     🔴 HERO SECTION (the big first screen)
+     Change the tag line, your name display, and the short bio below
+     ============================================================ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-scanline"></div>
+
+  <!-- 📝 Your job title tag -->
+  <div class="hero-tag">Video Editor &amp; Visual Designer / Operator</div>
+
+  <!-- 📝 Your name — SUPAKORN is in red, KHAWPONG is outlined -->
+  <h1>
+    <span class="accent-name" data-text="SUPAKORN">SUPAKORN</span><br>
+    <span class="outline">KHAWPONG</span>
+  </h1>
+
+  <!-- 📝 One-line description of yourself -->
+  <p class="hero-sub"><span id="typing-text"></span><span class="typing-cursor"></span></p>
+
+  <div class="hero-cta">
+    <a class="btn-primary" href="#work">View My Work</a>
+    <a class="btn-ghost" href="#contact">Get in Touch</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- FLOATING SCROLL BUTTON -->
+<a href="#contact" id="scroll-btn" style="
+  position: fixed;
+  right: 1.5rem;
+  bottom: 2rem;
+  z-index: 500;
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--muted);
+  transition: all 0.25s;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+" onmouseover="this.style.background='rgba(226,75,74,0.15)';this.style.borderColor='rgba(226,75,74,0.4)';this.style.color='#e24b4a'"
+   onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='var(--muted)'">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+    <path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+
+<!-- SCROLL TO TOP BUTTON -->
+<!-- SCROLL TO TOP WITH PROGRESS RING -->
+<div id="scroll-top-ring" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 44 44" width="44" height="44">
+    <circle class="ring-bg" cx="22" cy="22" r="20"/>
+    <circle class="ring-fill" id="ring-fill" cx="22" cy="22" r="20"/>
+  </svg>
+  <div class="ring-inner">
+    <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+      <path d="M7 12V2M2 7l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</div>
+
+<!-- AMBIENT AUDIO -->
+<audio id="ambient-audio" loop>
+  <source src="Stereo%20Nuts%20-%20Interstellar.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SOUND TOGGLE -->
+<button id="sound-btn" onclick="toggleSound()" style="
+  position: fixed; right: 1.5rem; bottom: 17rem; z-index: 500;
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--muted);
+  transition: all 0.25s;
+  font-size: 14px;
+" onmouseover="this.style.background='rgba(226,75,74,0.15)';this.style.borderColor='rgba(226,75,74,0.4)';this.style.color='#e24b4a'"
+   onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='var(--muted)'">
+  🔇
+</button>
+<div class="share-toast" id="share-toast">LINK COPIED!</div>
+<button class="share-btn" onclick="sharePortfolio()" title="Share">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+    <circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="3" cy="7" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M9.5 3.5L4.5 6.5M4.5 7.5L9.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<!-- ============================================================
+     🟡 ABOUT SECTION
+     Change the bio paragraphs and your 3 stats below
+     ============================================================ -->
+<section id="about">
+  <div class="section-label reveal">About Me <span>/ 01</span></div>
+  <div class="about-grid reveal">
+    <div>
+      <h2 class="about-title">I Edit <em style="color:var(--accent);font-style:normal;">Films.</em> Design <em style="color:var(--accent);font-style:normal;">Visuals.</em><br>Tell Stories.</h2>
+
+      <!-- 📝 Write about yourself here — change both paragraphs -->
+      <p class="about-body">
+        Hi, I'm Supakorn Khawpong — a Bangkok-based Video Editor and Visual Designer / Operator. Passionate about video editing and all forms of visual creation, I'm always looking for opportunities to push my boundaries and elevate my craft.
+      </p>
+
+      <!-- 📝 Change the numbers and labels for your stats -->
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num">2<span>+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📝 YOUR PHOTO — replace "YOUR-PHOTO.jpg" with your actual image filename
+         Put the image file in the same folder as this HTML file -->
+    <div>
+      <div class="about-img-wrap">
+        <img src="169258.jpg" alt="Supakorn Khawpong">
+        <div class="about-corner"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     🟢 WORK / PROJECTS SECTION
+     Each "project-card" block = one project
+     Copy/paste a full project-card block to add more projects
+     ============================================================ -->
+<section id="work">
+  <div class="section-label reveal">Selected Work <span>/ 02</span></div>
+
+  <!-- SEARCH BOX -->
+  <div class="search-wrap reveal">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="search-input" type="text" placeholder="Search projects...">
+  </div>
+  <div class="search-no-result" id="search-no-result">No projects found</div>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="visual">Visual</button>
+    <button class="filter-btn" data-filter="edit">Editor</button>
+    <button class="filter-btn" data-filter="cg">CG</button>
+    <button class="filter-btn" data-filter="photography">Photography</button>
+    <button class="filter-btn" data-filter="photo">Other</button>
+  </div>
+
+  <!-- VISUAL SUBSECTION -->
+  <div class="section-label filter-heading" data-section="visual" style="color: var(--text); letter-spacing:0.2em;">Visual</div>
+  <div class="projects-grid" id="visual-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/oC4m_8FFTaE','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/oC4m_8FFTaE/maxresdefault.jpg" alt="Surff — ตู้ปลา Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Surff — ตู้ปลา Visual</div>
+      <p class="project-desc">Visual work I created for Surff's song "ตู้ปลา", performed live at Volume Live House on July 4th.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/pj3kXe23s-8','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/pj3kXe23s-8/maxresdefault.jpg" alt="Surff — Lucky Boy Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Surff — Lucky Boy Visual</div>
+      <p class="project-desc">Visual work I created for Surff's song "Lucky Boy", performed live at Volume Live House on July 4th.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/IR-QDAFD3SQ','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/IR-QDAFD3SQ/maxresdefault.jpg" alt="Surff — รำคาญ Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Surff — รำคาญ Visual</div>
+      <p class="project-desc">Visual work I created for Surff's song "รำคาญ", performed live at Volume Live House on July 4th.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/BGLkC0ZjG_c','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/BGLkC0ZjG_c/maxresdefault.jpg" alt="Surff — ก็ไม่เหมือนเดิมแล้วไง Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Surff — ก็ไม่เหมือนเดิมแล้วไง Visual</div>
+      <p class="project-desc">Visual work I created for Surff's song "ก็ไม่เหมือนเดิมแล้วไง", performed live at Volume Live House on July 4th.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/GLbW6yDIZkk','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/GLbW6yDIZkk/maxresdefault.jpg" alt="Chilax — เจ็บแต่ไม่จำ Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Chilax — เจ็บแต่ไม่จำ Visual</div>
+      <p class="project-desc">Visual work I created for the band Chilax's song "เจ็บแต่ไม่จำ", performed live at Volume Live House on July 4th.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 6 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/cLl0kAabyC0','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/cLl0kAabyC0/maxresdefault.jpg" alt="Chilax — เหนื่อยเปล่า Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Chilax — เหนื่อยเปล่า Visual</div>
+      <p class="project-desc">Visual work I created for the band Chilax's song "เหนื่อยเปล่า", performed live at Volume Live House on July 4th.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 7 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/WG0y4DmkWFU','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/WG0y4DmkWFU/maxresdefault.jpg" alt="Chilax — ได้ยัง Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Chilax — ได้ยัง Visual</div>
+      <p class="project-desc">Visual work I created for the band Chilax's song "ได้ยัง", performed live at Volume Live House on July 4th.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 8 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/Z6Wg1ZiEWGc','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/Z6Wg1ZiEWGc/maxresdefault.jpg" alt="Oventure — Sripatum University Orientation" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Oventure — Sripatum University Orientation</div>
+      <p class="project-desc">Oventure visual for the orientation event of the Faculty of Communication Arts, Sripatum University.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 9 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/naxwEAw7lbI','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/naxwEAw7lbI/maxresdefault.jpg" alt="NITED DAY : SPU LoopMain" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">NITED DAY : SPU LoopMain</div>
+      <p class="project-desc">The main looping visual designed for the NITED DAY event at Sripatum University.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 10 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/eCST9R7Lf9M','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/eCST9R7Lf9M/maxresdefault.jpg" alt="Oventure - This is Moment" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Oventure — This is Moment</div>
+      <p class="project-desc">For this video, I created almost everything myself, primarily using TouchDesigner. Integrating self-taught skills across After Effects, Premiere Pro, and TouchDesigner to bring it all together.</p>
+      <div class="project-meta">
+        <span>2026</span>
+        <span>PR / AE / TouchDesigner</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 11 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/oHtXArBBbzU','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/oHtXArBBbzU/maxresdefault.jpg" alt="Oventure - CHECK YOUR DNA" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Oventure — CHECK YOUR DNA</div>
+      <p class="project-desc">This piece is definitely one of the coolest things I've made! I really love how it turned out. It was super challenging, which makes it even more special since it was my very first attempt.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 12 -->
+  <div class="project-card" onclick="window.open('https://youtu.be/tsH47wQCZOo','_blank')" style="cursor:pointer;">
+    <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/tsH47wQCZOo/maxresdefault.jpg" alt="ก็แค่พูดมา Three Man Down Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+    </div>
+    <div class="project-cat">Visual</div>
+    <div class="project-name">ก็แค่พูดมา Three Man Down Visual</div>
+    <p class="project-desc">This visual started as a practice project, inspired by a song I really love. I put a lot of heart and effort into creating it.</p>
+    <div class="project-meta">
+        <span>2026</span>
+        <span>PR / AE </span>
+    </div>
+</div>
+
+    <!-- PROJECT 13 -->
+   <div class="project-card" onclick="window.open('https://youtu.be/HCwq12tEHHw','_blank')" style="cursor:pointer;">
+    <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/HCwq12tEHHw/maxresdefault.jpg" alt="QVINT Visual &quot;Greed&quot;" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+    </div>
+    <div class="project-cat">Visual</div>
+    <div class="project-name">QVINT Visual "Greed"</div>
+    <p class="project-desc">This visual was tailored for the song 'กรี๊ด' at an event. It features a custom-designed logo based on my interpretation of the song, complemented by a glitchy visual style.</p>
+    <div class="project-meta">
+        <span>2026</span>
+        <span>PR / AE / TouchDesigner</span>
+    </div>
+</div>
+
+    <!-- PROJECT 14 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/dkgi1za1Q_4','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/dkgi1za1Q_4/maxresdefault.jpg" alt="INTRO + Yoom QVINT" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">INTRO + Yoom QVINT</div>
+      <p class="project-desc">Another visual experiment I built from the ground up.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 15 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/8sM6Hnu_CII','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/8sM6Hnu_CII/maxresdefault.jpg" alt="What Do you want QVINT Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">What Do you want QVINT Visual</div>
+      <p class="project-desc">Visual for QVINT</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 16 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/9LK66EESFyE','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/9LK66EESFyE/maxresdefault.jpg" alt="VISUAL สะลือสะลืม - SO QUIET" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">VISUAL สะลือสะลืม - SO QUIET</div>
+      <p class="project-desc">My first-ever 8-bit animation project, featuring a hand-drawn motion loop of a person lying in bed.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 17 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/BcLQK4Mvnow','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/BcLQK4Mvnow/maxresdefault.jpg" alt="ถ่าแหน่เด้อ - แดนสนถยา Visual" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">ถ่าแหน่เด้อ - แดนสนถยา Visual</div>
+      <p class="project-desc">Here's another visual I made just for fun, inspired by a song, as usual. I had a blast making it, and listening to the track really makes me miss home.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 18 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/_Sox5bmydmA','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/_Sox5bmydmA/maxresdefault.jpg" alt="Visual เพลง EDM" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Visual เพลง EDM</div>
+      <p class="project-desc">This visual came to life when a senior of mine produced a track but didn't have any visuals for it, so he asked me to create them for him.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 19 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/S-cPd_FSpDQ','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/S-cPd_FSpDQ/maxresdefault.jpg" alt="LOOPMAIN NEXT WAVE" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">LOOPMAIN NEXT WAVE</div>
+      <p class="project-desc">The main looping visual designed for a client's 'Next Wave' project.</p>
+      <div class="project-meta"><span>2026</span><span>PR / PS</span></div>
+    </div>
+
+    <!-- PROJECT 20 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/ABjAU4IraSw','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/ABjAU4IraSw/maxresdefault.jpg" alt="LOOPMAIN ของ งานThe PARICH" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">LOOPMAIN ของ งานThe PARICH</div>
+      <p class="project-desc">A main looping visual designed and animated for a client's event.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AI / AE</span></div>
+    </div>
+
+    <!-- PROJECT 21 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/_pA8uQdNIrg','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/_pA8uQdNIrg/maxresdefault.jpg" alt="CMA37 LoopMain" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">CMA37 LoopMain</div>
+      <p class="project-desc">Main screen loop visual designed and animated for the CMA37 client project.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 22 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/Bp1S-CjdRoo','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/Bp1S-CjdRoo/maxresdefault.jpg" alt="LOOPMAIN CHINESE" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">LOOPMAIN CHINESE</div>
+      <p class="project-desc">A Chinese-themed main looping visual created for a client's event.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 23 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/LihyjZSDA38','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/LihyjZSDA38/maxresdefault.jpg" alt="Visual QVINT รักฉันเรียกว่าเธอ" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">Visual QVINT รักฉันเรียกว่าเธอ</div>
+      <p class="project-desc">I had the chance to create the visual for this song, and it turned out super cute! haha</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- PROJECT 24 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/j9G0lxQo0MQ','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/j9G0lxQo0MQ/maxresdefault.jpg" alt="ตกหลุมรัก Visual QVINT" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Visual</div>
+      <div class="project-name">ตกหลุมรัก Visual QVINT</div>
+      <p class="project-desc">VISUAL FOR QVINT</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+  </div>
+
+  <!-- EDITOR SUBSECTION -->
+  <div class="section-label filter-heading" data-section="edit" style="margin-top:4rem; color: var(--text); letter-spacing:0.2em;">Editor</div>
+  <div class="projects-grid" id="edit-grid">
+
+    <!-- EDIT 1 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/Pv-98iWxmMI','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/Pv-98iWxmMI/maxresdefault.jpg" alt="Colorists5 Concert Wrap-Up" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">Colorists5 Concert Wrap-Up</div>
+      <p class="project-desc">A wrap-up edit recapping the Colorists5 concert event. This was actually my first time editing a wrap-up video, so it was a really fun challenge.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 2 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/ISAD4CZhvOw','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/ISAD4CZhvOw/maxresdefault.jpg" alt="ลบยัง Mv Cover" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">ลบยัง Mv Cover</div>
+      <p class="project-desc">The 'ลบยัง' Cover MV was an insanely challenging project because it was my very first time doing CG! haha. I got the chance to experiment with so many new techniques. Hope you guys enjoy it!</p>
+      <div class="project-meta"><span>2025</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 3 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/0skYg-RGOFQ','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/0skYg-RGOFQ/maxresdefault.jpg" alt="VTR SCHOOL" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">VTR SCHOOL</div>
+      <p class="project-desc">This video is a commissioned editing project for a client.</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 4 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/VWYYiJoYQr8','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/VWYYiJoYQr8/maxresdefault.jpg" alt="ลงทุนวันนี้เพื่อผลประโยชน์ในวันหน้า" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">ลงทุนวันนี้เพื่อผลประโยชน์ในวันหน้า</div>
+      <p class="project-desc">This is another competition entry where I took on the roles of both director and editor.</p>
+      <div class="project-meta"><span>2024</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 5 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/QVL-tNgxyBs','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/QVL-tNgxyBs/maxresdefault.jpg" alt="The Boxed - BLOCKBOX PROD." style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">The Boxed - BLOCKBOX PROD.</div>
+      <p class="project-desc">For this short film competition entry, I took on the roles of both Video Editor and Sound Designer.</p>
+      <div class="project-meta"><span>2025</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 6 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/l_nl4hAYqig','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/l_nl4hAYqig/maxresdefault.jpg" alt="VLOG DISNEY ลูกค้า" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">VLOG DISNEY ลูกค้า</div>
+      <p class="project-desc">A Disney VLOG project where I was commissioned by a client for the video editing.</p>
+      <div class="project-meta"><span>2024</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 7 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/9B248gryX34','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/9B248gryX34/maxresdefault.jpg" alt="MAKE FRIENDS EP.3 | พบกับ D GERRARD เจ้าของเพลงสุดฮิต" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit / Camera</div>
+      <div class="project-name">MAKE FRIENDS EP.3 | พบกับ D GERRARD เจ้าของเพลงสุดฮิต</div>
+      <p class="project-desc">During my internship, I had the opportunity to both film and edit this project.</p>
+      <div class="project-meta"><span>2024</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 8 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/gRetXEkI0lY','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/gRetXEkI0lY/maxresdefault.jpg" alt="MAKE FRIENDS EP.4 | ช่วงโปรโมชั่น...แฉวีรกรรมแสบ ที่ไม่มีใครเคยรู้!!" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit / Camera</div>
+      <div class="project-name">MAKE FRIENDS EP.4 | ช่วงโปรโมชั่น...แฉวีรกรรมแสบ ที่ไม่มีใครเคยรู้!!</div>
+      <p class="project-desc">This was the very first project I worked on at the start of my internship.</p>
+      <div class="project-meta"><span>2024</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 9 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/HI2IuMWLQJs','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/HI2IuMWLQJs/maxresdefault.jpg" alt="MAKE FRIENDS EP.5 | เจ้าของเพลง เผื่อวันไหนเธอจะกลับมา" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">MAKE FRIENDS EP.5 | เจ้าของเพลง "เผื่อวันไหนเธอจะกลับมา"</div>
+      <p class="project-desc">This is one of my favorite projects because I had the opportunity to edit for an artist I truly admire.</p>
+      <div class="project-meta"><span>2024</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 10 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/rKiSoE0aMr0','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/rKiSoE0aMr0/maxresdefault.jpg" alt="เที่ยวเมืองออสโลกับซีซีน 3วัน 2คืน 🇳🇴" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">เที่ยวเมืองออสโลกับซีซีน 3วัน 2คืน 🇳🇴</div>
+      <p class="project-desc">I just tried long-form editing for the first time and realized it's exactly what I want to do. Can't wait for the next one!</p>
+      <div class="project-meta"><span>2026</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 11 -->
+    <div class="project-card" onclick="window.open('https://youtu.be/RcCRKHR3fco','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/RcCRKHR3fco/maxresdefault.jpg" alt="แล่น - PARADOX l [Unofficial MV] By มนุษย์หนัง Production" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit</div>
+      <div class="project-name">แล่น - PARADOX l [Unofficial MV] By มนุษย์หนัง Production</div>
+      <p class="project-desc">Excited to have been part of the post-production team as Editor 2. My main focus was supporting the senior editors with CG elements and creative edits to bring this PARADOX MV to life. It was an incredible learning experience collaborating with such a talented team.</p>
+      <div class="project-meta"><span>2025</span><span>PR / AE</span></div>
+    </div>
+
+    <!-- EDIT 12 -->
+    <div class="project-card" onclick="window.open('https://youtube.com/shorts/Pb5rS5w3IBA','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/Pb5rS5w3IBA/maxresdefault.jpg" alt="CK interview" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">Edit / MC</div>
+      <div class="project-name">CK interview</div>
+      <p class="project-desc">I had the incredible opportunity to interview CK, a prominent figure in the tech and creative industry, regarding the transformative role of Artificial Intelligence in filmmaking.</p>
+      <div class="project-meta"><span>2025</span><span>PR / AE</span></div>
+    </div>
+
+  </div>
+
+  <!-- CG SUBSECTION -->
+  <div class="section-label filter-heading" data-section="cg" style="margin-top:4rem; color: var(--text); letter-spacing:0.2em;">CG</div>
+  <div class="projects-grid" id="cg-grid">
+
+    <!-- CG 1 -->
+    <div class="project-card" onclick="window.open('https://youtube.com/shorts/4_ywSYdj9PY','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/4_ywSYdj9PY/maxresdefault.jpg" alt="CG ERASER" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">CG</div>
+      <div class="project-name">CG ERASER</div>
+      <p class="project-desc">This was one of my earliest explorations into CG. I used this project as a playground to practice my technical skills and learn the fundamentals of visual effects integration.</p>
+      <div class="project-meta"><span>2025</span><span>AE / PR</span></div>
+    </div>
+
+    <!-- CG 2 -->
+    <div class="project-card" onclick="window.open('https://youtube.com/shorts/1s_TNYjza_Y','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/1s_TNYjza_Y/maxresdefault.jpg" alt="CG LIGHT GLOW" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">CG</div>
+      <div class="project-name">CG LIGHT GLOW</div>
+      <p class="project-desc">CG LIGHT GLOW</p>
+      <div class="project-meta"><span>2025</span><span>AE / PR</span></div>
+    </div>
+
+    <!-- CG 3 -->
+    <div class="project-card" onclick="window.open('https://youtube.com/shorts/z40iaY_7J8s','_blank')" style="cursor:pointer;">
+      <div class="project-thumb">
+        <img loading="lazy" src="https://img.youtube.com/vi/z40iaY_7J8s/maxresdefault.jpg" alt="CG ANGRY" style="width:100%;height:100%;object-fit:cover;">
+        <div class="play-btn"><svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg></div>
+      </div>
+      <div class="project-cat">CG</div>
+      <div class="project-name">CG ANGRY</div>
+      <p class="project-desc">CG ANGRY</p>
+      <div class="project-meta"><span>2025</span><span>PR / AE</span></div>
+    </div>
+
+  </div>
+
+  <!-- PHOTOGRAPHY SUBSECTION -->
+  <div class="section-label filter-heading" data-section="photography" style="margin-top:4rem; color: var(--text); letter-spacing:0.2em;">Photography</div>
+  <div class="projects-grid" id="photography-grid">
+
+    <!-- FASHION ALBUM -->
+    <div class="project-card album-card" onclick="openAlbum('fashion')" style="cursor:pointer;">
+      <div class="project-thumb" style="overflow:hidden;">
+        <img loading="lazy" src="675930213_1748709696505577_2342924610634858975_n.jpg" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;bottom:0.75rem;right:0.75rem;background:rgba(0,0,0,0.6);padding:0.25rem 0.6rem;font-size:10px;letter-spacing:0.1em;color:#fff;backdrop-filter:blur(4px);">6 PHOTOS</div>
+      </div>
+      <div class="project-cat">Photography</div>
+      <div class="project-name">Fashion</div>
+      <p class="project-desc">A fashion photography series.</p>
+      <div class="project-meta"><span>2026</span><span>Photography</span></div>
+    </div>
+
+    <!-- FOOD ALBUM -->
+    <div class="project-card album-card" onclick="openAlbum('food')" style="cursor:pointer;">
+      <div class="project-thumb" style="overflow:hidden;">
+        <img loading="lazy" src="IMG_1184.jpg" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;bottom:0.75rem;right:0.75rem;background:rgba(0,0,0,0.6);padding:0.25rem 0.6rem;font-size:10px;letter-spacing:0.1em;color:#fff;backdrop-filter:blur(4px);">8 PHOTOS</div>
+      </div>
+      <div class="project-cat">Photography</div>
+      <div class="project-name">Food</div>
+      <p class="project-desc">A food photography series.</p>
+      <div class="project-meta"><span>2026</span><span>Photography</span></div>
+    </div>
+
+  </div>
+
+  <!-- PHOTO SUBSECTION -->
+  <div class="section-label filter-heading" data-section="photo" style="margin-top:4rem; color: var(--text); letter-spacing:0.2em;">Other</div>
+  <div class="projects-grid" id="photo-grid">
+
+    <!-- ALBUM 1 -->
+    <div class="project-card album-card" onclick="openAlbum('visual-work')" style="cursor:pointer;">
+      <div class="project-thumb" style="overflow:hidden;">
+        <img loading="lazy" src="J_500018.jpg" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;bottom:0.75rem;right:0.75rem;background:rgba(0,0,0,0.6);padding:0.25rem 0.6rem;font-size:10px;letter-spacing:0.1em;color:#fff;backdrop-filter:blur(4px);">14 PHOTOS</div>
+      </div>
+      <div class="project-cat">Album</div>
+      <div class="project-name">Event Work</div>
+      <p class="project-desc">Behind the scenes from Visual projects.</p>
+      <div class="project-meta"><span>2025–2026</span><span>Work</span></div>
+    </div>
+
+    <!-- ALBUM 2 -->
+    <div class="project-card album-card" onclick="openAlbum('edit-work')" style="cursor:pointer;">
+      <div class="project-thumb" style="overflow:hidden;">
+        <img loading="lazy" src="IMG_20260419_001556.jpg" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;bottom:0.75rem;right:0.75rem;background:rgba(0,0,0,0.6);padding:0.25rem 0.6rem;font-size:10px;letter-spacing:0.1em;color:#fff;backdrop-filter:blur(4px);">11 PHOTOS</div>
+      </div>
+      <div class="project-cat">Album</div>
+      <div class="project-name">Edit Work</div>
+      <p class="project-desc">Behind the scenes from Edit projects.</p>
+      <div class="project-meta"><span>2024–2026</span><span>Work</span></div>
+    </div>
+
+    <!-- ALBUM 3 -->
+    <div class="project-card album-card" onclick="openAlbum('production-work')" style="cursor:pointer;">
+      <div class="project-thumb" style="overflow:hidden;">
+        <img loading="lazy" src="DSC07709.JPG" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;bottom:0.75rem;right:0.75rem;background:rgba(0,0,0,0.6);padding:0.25rem 0.6rem;font-size:10px;letter-spacing:0.1em;color:#fff;backdrop-filter:blur(4px);">10 PHOTOS</div>
+      </div>
+      <div class="project-cat">Album</div>
+      <div class="project-name">Production Work</div>
+      <p class="project-desc">Behind the scenes from Production projects.</p>
+      <div class="project-meta"><span>2024–2026</span><span>Work</span></div>
+    </div>
+
+  </div>
+</section>
+<div id="album-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:1000; overflow-y:auto; padding:2rem;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2rem;">
+      <div id="album-title" style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted);"></div>
+      <button onclick="closeAlbum()" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:var(--text); padding:0.5rem 1.5rem; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.15em; cursor:pointer;">✕ CLOSE</button>
+    </div>
+    <div id="album-empty" style="display:none; text-align:center; padding:4rem; color:var(--muted); font-size:13px; letter-spacing:0.1em;">No photos yet — add some!</div>
+    <div id="album-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px;"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.97); z-index:2000; align-items:center; justify-content:center; flex-direction:column;">
+  <button onclick="closeLightbox()" style="position:absolute; top:1.5rem; right:1.5rem; background:none; border:none; color:white; font-size:1.5rem; cursor:pointer;">✕</button>
+  <button onclick="prevPhoto()" style="position:absolute; left:1.5rem; background:none; border:none; color:white; font-size:2rem; cursor:pointer; top:50%; transform:translateY(-50%);">‹</button>
+  <button onclick="nextPhoto()" style="position:absolute; right:1.5rem; background:none; border:none; color:white; font-size:2rem; cursor:pointer; top:50%; transform:translateY(-50%);">›</button>
+  <img loading="lazy" id="lightbox-img" src="" style="max-width:90vw; max-height:85vh; object-fit:contain;">
+  <div id="lightbox-caption" style="margin-top:1rem; font-size:11px; letter-spacing:0.15em; color:rgba(255,255,255,0.4); text-transform:uppercase;"></div>
+</div>
+<section id="skills">
+  <div class="section-label reveal">Skills &amp; Tools <span>/ 03</span></div>
+  <div class="skills-layout reveal">
+    <div class="skills-intro">
+      <h2>What I Bring<br>to the Edit.</h2>
+      <p>A full toolkit spanning editing, color, motion, and live production — built over years of real-world projects.</p>
+    </div>
+    <div id="skills-list">
+
+      <!-- 📝 Each row = one skill. Change the name, data-w percentage, and display % -->
+      <div class="skill-item">
+        <span class="skill-name">Adobe Premiere Pro</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level advanced">Advanced</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">After Effects</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level intermediate">Intermediate</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Photoshop</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level intermediate">Intermediate</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Resolume Arena</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level intermediate">Intermediate</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">DaVinci Resolve</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level basic">Basic</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Color Grading</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level basic">Basic</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Motion Graphics</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level basic">Basic</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Sound Design</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level basic">Basic</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">TouchDesigner</span>
+        <div class="skill-bar-wrap"></div>
+        <span class="skill-level basic">Basic</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     🟡 EXPERIENCE / TIMELINE SECTION
+     ============================================================ -->
+<section id="experience">
+  <div class="section-label reveal">Experience <span>/ 03.5</span></div>
+  <div class="skills-layout reveal">
+
+    <!-- INTERNSHIP -->
+    <div>
+      <h3 style="font-family:'DB Adman X',sans-serif; font-size:1.1rem; letter-spacing:0.1em; color:var(--muted); margin-bottom:2rem; text-transform:uppercase;">Internship</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-title">DGY - DooGunYoung</div>
+          <div class="timeline-role">Editor / Camera</div>
+          <div class="timeline-desc">Internship in video editing and camera operation.</div>
+          <span class="timeline-tag">Editor</span>
+          <span class="timeline-tag">Camera</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FREELANCE & EVENT -->
+    <div>
+      <h3 style="font-family:'DB Adman X',sans-serif; font-size:1.1rem; letter-spacing:0.1em; color:var(--muted); margin-bottom:2rem; text-transform:uppercase;">Freelance & Event Visual</h3>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-title">SAVELLA CLINIC</div>
+          <div class="timeline-role">Freelance Editor</div>
+          <div class="timeline-desc">Edited atmosphere and promotional clips for the clinic's social media.</div>
+          <span class="timeline-tag">Freelance</span>
+          <span class="timeline-tag">Editor</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-title">NEXTWAVE SOLUTION DAY</div>
+          <div class="timeline-role">Event Visual Operator</div>
+          <div class="timeline-desc">Operated screen and designed visuals for the event.</div>
+          <span class="timeline-tag">Event Visual</span>
+          <span class="timeline-tag">Operator</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-title">Parich The New Era</div>
+          <div class="timeline-role">Event Visual Operator</div>
+          <div class="timeline-desc">Operated screen and designed visuals for the event.</div>
+          <span class="timeline-tag">Event Visual</span>
+          <span class="timeline-tag">Operator</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-title">Bank PII VLOG</div>
+          <div class="timeline-role">Freelance Editor</div>
+          <div class="timeline-desc">Edited travel VLOG — เที่ยวเมืองออสโลกับซีซัน 3 วัน 2 คืน.</div>
+          <span class="timeline-tag">Freelance</span>
+          <span class="timeline-tag">Editor</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-title">QPM</div>
+          <div class="timeline-role">Event Visual Operator</div>
+          <div class="timeline-desc">Operated screen and designed visuals for the event.</div>
+          <span class="timeline-tag">Event Visual</span>
+          <span class="timeline-tag">Operator</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-title">PAY SOLUTION DAY</div>
+          <div class="timeline-role">Event Visual Operator</div>
+          <div class="timeline-desc">Operated screen and designed visuals for the event.</div>
+          <span class="timeline-tag">Event Visual</span>
+          <span class="timeline-tag">Operator</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">Supee Rose</div>
+          <div class="timeline-role">Freelance Editor</div>
+          <div class="timeline-desc">Edited PR and VLOG clips for the client.</div>
+          <span class="timeline-tag">Freelance</span>
+          <span class="timeline-tag">Editor</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     🟠 CONTACT SECTION
+     Change your email, Instagram, Vimeo, and LinkedIn links
+     For href: use "mailto:your@email.com" for email
+               use the full URL for social links
+     ============================================================ -->
+<section id="contact" style="position:relative; overflow:hidden;">
+  <div class="hero-particles" id="particles-contact"></div>
+  <div class="section-label reveal">Contact <span>/ 04</span></div>
+  <div class="contact-inner reveal">
+    <h2>LET'S<br>MAKE<br><span class="outline">SOMETHING.</span></h2>
+
+    <!-- 📝 Change this short paragraph -->
+    <p>Available for freelance projects, collaborations, and full-time opportunities. Based in Bangkok — open to remote work worldwide.</p>
+
+    <div>
+      <!-- 📝 Change href and the display text for each contact link -->
+      <a class="contact-link" href="mailto:xooxrn.work@gmail.com">
+        <span class="cl-label">Email</span>
+        <span class="cl-value">xooxrn.work@gmail.com</span>
+        <span>→</span>
+      </a>
+      <a class="contact-link" href="https://www.instagram.com/xo_oxrn/" target="_blank">
+        <span class="cl-label">Instagram</span>
+        <span class="cl-value">@xo_oxrn</span>
+        <span>→</span>
+      </a>
+      <a class="contact-link" href="https://www.facebook.com/supakorn.khawpong/?locale=th_TH" target="_blank">
+        <span class="cl-label">Facebook</span>
+        <span class="cl-value">Supakorn Khawpong</span>
+        <span>→</span>
+      </a>
+      <a class="contact-link" href="tel:0611823725">
+        <span class="cl-label">Phone</span>
+        <span class="cl-value">061-182-3725</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SUPAKORN KHAWPONG</div>
+  <div class="footer-copy">© 2026 — Video Editor & Visual Designer / Operator, Bangkok</div>
+</footer>
+
+<script>
+  // Ambient Sound
+  const audio = document.getElementById('ambient-audio');
+  const soundBtn = document.getElementById('sound-btn');
+  audio.volume = 0.15;
+  let soundOn = false;
+
+  function toggleSound() {
+    if (soundOn) {
+      audio.pause();
+      soundBtn.textContent = '🔇';
+      soundOn = false;
+    } else {
+      audio.play().catch(() => {});
+      soundBtn.textContent = '🔊';
+      soundOn = true;
+    }
+  }
+
+  // Hamburger Menu
+  function toggleMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+    hamburger.classList.toggle('open');
+    menu.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+
+  // Preloader — fixed short delay instead of waiting for window 'load'
+  // (waiting for 'load' meant the preloader sat there until every single
+  // image on the page had finished downloading, which made timing wildly
+  // inconsistent depending on network speed/cache). This script runs at
+  // the end of <body>, so the DOM is already parsed by the time it fires.
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('hide');
+  }, 900);
+
+  // Scroll to top progress ring
+  const ringEl = document.getElementById('scroll-top-ring');
+  const ringFill = document.getElementById('ring-fill');
+  const circumference = 126;
+
+  // Debounce utility
+  function debounce(fn, delay) {
+    let timer;
+    return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), delay); };
+  }
+
+  // Single optimized scroll handler using RAF
+  const progressBar = document.getElementById('progress-bar');
+  const sections = document.querySelectorAll('section[id], .hero[id]');
+  const navLinks = document.querySelectorAll('nav ul li a');
+  let ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = scrollTop / docHeight;
+
+        // Progress bar
+        progressBar.style.width = (progress * 100) + '%';
+
+        // Scroll ring
+        ringFill.style.strokeDashoffset = circumference - (progress * circumference);
+        if (scrollTop > 300) ringEl.classList.add('visible');
+        else ringEl.classList.remove('visible');
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Active nav (debounced separately — less critical)
+  window.addEventListener('scroll', debounce(() => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  }, 60), { passive: true });
+
+  // Share Portfolio
+  function sharePortfolio() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const toast = document.getElementById('share-toast');
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translateY(8px)'; }, 2000);
+    });
+  }
+
+  // Search Projects
+  const searchInput = document.getElementById('search-input');
+  const noResult = document.getElementById('search-no-result');
+  searchInput.addEventListener('input', debounce(() => {
+    const query = searchInput.value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.project-card');
+    let visible = 0;
+    cards.forEach(card => {
+      const name = card.querySelector('.project-name')?.textContent.toLowerCase() || '';
+      const cat = card.querySelector('.project-cat')?.textContent.toLowerCase() || '';
+      const desc = card.querySelector('.project-desc')?.textContent.toLowerCase() || '';
+      const match = !query || name.includes(query) || cat.includes(query) || desc.includes(query);
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    noResult.style.display = visible === 0 ? 'block' : 'none';
+  }, 150));
+
+  // Typing Effect
+  const phrases = ['WELCOME TO ZO WORK PLEASE ENJOY', 'VIDEO EDITOR & VISUAL DESIGNER', 'BASED IN BANGKOK'];
+  let phraseIndex = 0, charIndex = 0, isDeleting = false;
+  const typingEl = document.getElementById('typing-text');
+  function type() {
+    const current = phrases[phraseIndex];
+    if (isDeleting) {
+      typingEl.textContent = current.substring(0, charIndex--);
+    } else {
+      typingEl.textContent = current.substring(0, charIndex++);
+    }
+    let speed = isDeleting ? 40 : 80;
+    if (!isDeleting && charIndex === current.length + 1) {
+      speed = 2000; isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      speed = 400;
+    }
+    setTimeout(type, speed);
+  }
+  type();
+
+  // Card Overlay — add to all project thumbs with images
+  document.querySelectorAll('.project-card .project-thumb img').forEach(img => {
+    const overlay = document.createElement('div');
+    overlay.className = 'card-overlay';
+    overlay.innerHTML = '<span>View Project →</span>';
+    img.parentElement.appendChild(overlay);
+  });
+
+  // Scroll Reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-stagger');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Generate particles for contact section
+  const contactContainer = document.getElementById('particles-contact');
+  for (let i = 0; i < 40; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.width = p.style.height = (Math.random() * 2 + 1) + 'px';
+    p.style.animationDuration = (Math.random() * 10 + 8) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    p.style.opacity = Math.random() * 0.5;
+    contactContainer.appendChild(p);
+  }
+
+  // Generate particles
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 60; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.width = p.style.height = (Math.random() * 2 + 1) + 'px';
+    p.style.animationDuration = (Math.random() * 10 + 8) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    p.style.opacity = Math.random() * 0.5;
+    container.appendChild(p);
+  }
+
+  // Filter buttons
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const visualGrid = document.getElementById('visual-grid');
+  const editGrid = document.getElementById('edit-grid');
+  const cgGrid = document.getElementById('cg-grid');
+  const photoGrid = document.getElementById('photo-grid');
+  const photographyGrid = document.getElementById('photography-grid');
+  const headings = document.querySelectorAll('.filter-heading');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+
+      const show = (el) => el && (el.style.display = 'grid');
+      const hide = (el) => el && (el.style.display = 'none');
+
+      if (filter === 'all') {
+        show(visualGrid); show(editGrid); show(cgGrid); show(photoGrid); show(photographyGrid);
+        headings.forEach(h => h.style.display = 'flex');
+      } else if (filter === 'visual') {
+        show(visualGrid); hide(editGrid); hide(cgGrid); hide(photoGrid); hide(photographyGrid);
+        headings.forEach(h => h.style.display = h.dataset.section === 'visual' ? 'flex' : 'none');
+      } else if (filter === 'edit') {
+        hide(visualGrid); show(editGrid); hide(cgGrid); hide(photoGrid); hide(photographyGrid);
+        headings.forEach(h => h.style.display = h.dataset.section === 'edit' ? 'flex' : 'none');
+      } else if (filter === 'cg') {
+        hide(visualGrid); hide(editGrid); show(cgGrid); hide(photoGrid); hide(photographyGrid);
+        headings.forEach(h => h.style.display = h.dataset.section === 'cg' ? 'flex' : 'none');
+      } else if (filter === 'photo') {
+        hide(visualGrid); hide(editGrid); hide(cgGrid); show(photoGrid); hide(photographyGrid);
+        headings.forEach(h => h.style.display = h.dataset.section === 'photo' ? 'flex' : 'none');
+      } else if (filter === 'photography') {
+        hide(visualGrid); hide(editGrid); hide(cgGrid); hide(photoGrid); show(photographyGrid);
+        headings.forEach(h => h.style.display = h.dataset.section === 'photography' ? 'flex' : 'none');
+      }
+    });
+  });
+
+  // Album data — add photo URLs here
+  const albums = {
+    'visual-work': {
+      title: 'Event Work',
+      photos: [
+        { src: '%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-12.jpg', caption: '' },
+        { src: 'IMG_20251029_131439.jpg', caption: '' },
+        { src: 'IMG_20251029_140431.jpg', caption: '' },
+        { src: 'IMG_20251202_084806.jpg', caption: '' },
+        { src: 'IMG_20260124_005234_1.jpg', caption: '' },
+        { src: 'IMG_20260124_151027.jpg', caption: '' },
+        { src: 'IMG_20260204_194051.jpg', caption: '' },
+        { src: 'IMG_20260213_164354.jpg', caption: '' },
+        { src: 'IMG_20260227_125254.jpg', caption: '' },
+        { src: 'IMG_20260227_230833.jpg', caption: '' },
+        { src: 'J_500018.jpg', caption: '' },
+        { src: 'IMG_20260425_152229.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-42-32-214_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-42-50-561_com.instagram.android-edit.jpg', caption: '' },
+      ]
+    },
+    'production-work': {
+      title: 'Production Work',
+      photos: [
+        { src: 'IMG_5357.jpg', caption: '' },
+        { src: 'IMG_5456.jpg', caption: '' },
+        { src: 'IMG_5463.jpg', caption: '' },
+        { src: 'IMG_8660.JPG', caption: '' },
+        { src: 'IMG_8684.JPG', caption: '' },
+        { src: 'retouch_2025022022384387.jpg', caption: '' },
+        { src: 'retouch_2025052712004180.jpg', caption: '' },
+        { src: 'retouch_2025052712024284.jpg', caption: '' },
+        { src: 'DSC07572.JPG', caption: '' },
+        { src: 'DSC07709.JPG', caption: '' },
+      ]
+    },
+    'food': {
+      title: 'Food',
+      photos: [
+        { src: 'IMG_1184.jpg', caption: '' },
+        { src: 'IMG_1259.jpg', caption: '' },
+        { src: 'IMG_1088.jpg', caption: '' },
+        { src: 'IMG_1181.jpg', caption: '' },
+        { src: 'IMG_0955.jpg', caption: '' },
+        { src: 'IMG_0969.jpg', caption: '' },
+        { src: 'IMG_0780.jpg', caption: '' },
+        { src: 'IMG_0826.jpg', caption: '' },
+      ]
+    },
+    'fashion': {
+      title: 'Fashion',
+      photos: [
+        { src: '675930213_1748709696505577_2342924610634858975_n.jpg', caption: '' },
+        { src: '677154650_1748709533172260_171069394757373634_n.jpg', caption: '' },
+        { src: '674932479_1748709569838923_2899444905533745104_n.jpg', caption: '' },
+        { src: '678149620_1748709546505592_2029288713132601805_n.jpg', caption: '' },
+        { src: '678400982_1748709563172257_7651235254896873355_n.jpg', caption: '' },
+        { src: '678982747_1748709586505588_6736790675843290707_n.jpg', caption: '' },
+      ]
+    },
+    'edit-work': {
+      title: 'Edit Work',
+      photos: [
+        { src: 'Screenshot_2026-04-27-18-36-38-749_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-37-05-637_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-37-29-962_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-37-58-562_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-38-09-269_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-38-21-795_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-40-34-046_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-41-24-384_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-41-35-616_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-27-18-41-56-613_com.instagram.android-edit.jpg', caption: '' },
+        { src: 'Screenshot_2026-04-28-00-21-27-709_com.instagram.android-edit.jpg', caption: '' },
+      ]
+    }
+  };
+
+  let currentPhotos = [];
+  let currentIndex = 0;
+
+  function openAlbum(id) {
+    const album = albums[id];
+    document.getElementById('album-title').textContent = album.title;
+    const grid = document.getElementById('album-grid');
+    const empty = document.getElementById('album-empty');
+    grid.innerHTML = '';
+
+    if (album.photos.length === 0) {
+      empty.style.display = 'block';
+      grid.style.display = 'none';
+    } else {
+      empty.style.display = 'none';
+      grid.style.display = 'grid';
+      currentPhotos = album.photos;
+      album.photos.forEach((photo, i) => {
+        const img = document.createElement('img');
+        img.src = photo.src;
+        img.style.cssText = 'width:100%; aspect-ratio:1; object-fit:cover; cursor:pointer; transition:opacity 0.2s;';
+        img.onmouseover = () => img.style.opacity = '0.7';
+        img.onmouseout = () => img.style.opacity = '1';
+        img.onclick = () => openLightbox(i);
+        grid.appendChild(img);
+      });
+    }
+    document.getElementById('album-overlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeAlbum() {
+    document.getElementById('album-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const lb = document.getElementById('lightbox');
+    lb.style.display = 'flex';
+    document.getElementById('lightbox-img').src = currentPhotos[index].src;
+    document.getElementById('lightbox-caption').textContent = currentPhotos[index].caption || '';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  function prevPhoto() {
+    currentIndex = (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
+    openLightbox(currentIndex);
+  }
+
+  function nextPhoto() {
+    currentIndex = (currentIndex + 1) % currentPhotos.length;
+    openLightbox(currentIndex);
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeLightbox(); closeAlbum(); }
+    if (e.key === 'ArrowLeft') prevPhoto();
+    if (e.key === 'ArrowRight') nextPhoto();
+  });
+
+  // Skill bars animate when scrolled into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.skill-bar').forEach(bar => {
+          bar.style.width = bar.dataset.w;
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const skillsList = document.getElementById('skills-list');
+  if (skillsList) observer.observe(skillsList);
+</script>
+</body>
+</html>
